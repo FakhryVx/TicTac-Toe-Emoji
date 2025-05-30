@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #f8fafc 0%, #dbeafe 100%);
+    text-align: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+h1 {
+    color: #2563eb;
+    margin-top: 40px;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 8px #93c5fd55;
+}
+
+#board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-gap: 10px;
+    margin: 40px auto 0 auto;
+    width: 330px;
+    background: #2563eb22;
+    padding: 20px;
+    border-radius: 18px;
+    box-shadow: 0 8px 32px #2563eb22;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background: #f1f5f9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 0;
+    box-shadow: 0 2px 8px #2563eb11;
+    transition: background 0.2s, transform 0.1s;
+    position: relative;
+    overflow: hidden;
+}
+
+.cell:hover {
+    background: #93c5fd;
+    transform: scale(1.05);
+}
+
+.cell img {
+    width: 80px;
+    height: 80px;
+    transition: transform 0.2s;
+    animation: pop 0.3s;
+}
+
+.alert {
+    margin: 20px auto 0 auto;
+    padding: 14px 0;
+    width: 320px;
+    background: #fbbf24;
+    color: #1e293b;
+    font-size: 20px;
+    border-radius: 8px;
+    font-weight: bold;
+    box-shadow: 0 2px 8px #fbbf2433;
+    letter-spacing: 1px;
+    transition: background 0.2s;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.7); opacity: 0.5; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.scoreboard {
+    margin: 20px auto 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    color: #2563eb;
+    letter-spacing: 1px;
+}
+
+#reset {
+    margin-top: 30px;
+    padding: 12px 32px;
+    font-size: 18px;
+    background: linear-gradient(90deg, #2563eb 60%, #60a5fa 100%);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px #2563eb33;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+#reset:hover {
+    background: linear-gradient(90deg, #60a5fa 60%, #2563eb 100%);
+    transform: scale(1.05);
+}
